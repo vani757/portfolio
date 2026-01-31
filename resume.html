@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume | Bhavani Portfolio</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+                background: #0f0f1a;
+                color: #ffffff;
+                padding-top: 100px;
+                /* IMPORTANT: space for navbar */
+            }
+
+            /* ---------- NAVBAR ---------- */
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                background-color: rgb(121, 33, 204);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 60px;
+                z-index: 1000;
+            }
+
+            .navbar h2 {
+                color: #fff;
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+            }
+
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 15px;
+                position: relative;
+            }
+
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background: #e9d5ff;
+                left: 0;
+                bottom: -6px;
+                transition: 0.3s;
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+            .resume-section {
+                animation: fadeUp 1s ease-in-out;
+                max-width: 900px;
+                margin: auto;
+                background: #151528;
+                border-radius: 16px;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            }
+
+            .resume-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .btn-group {
+                display: flex;
+                gap: 12px;
+            }
+
+            .view-btn {
+                background: transparent;
+                border: 1px solid #a855f7;
+                color: #c084fc;
+                padding: 12px 22px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            .view-btn:hover {
+                background: rgba(168, 85, 247, 0.15);
+                box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+            }
+
+            .download-btn {
+                background: linear-gradient(135deg, #7b2cff, #a855f7);
+                color: #fff;
+                padding: 12px 24px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            .download-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+            }
+
+            .resume-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .block h2 {
+                font-size: 18px;
+                margin-bottom: 12px;
+                color: #c084fc;
+            }
+
+            .block h2::before {
+                content: "✦ ";
+                color: #a855f7;
+            }
+
+            .block p,
+            .block li {
+                font-size: 14px;
+                color: #d1d1e0;
+                line-height: 1.6;
+            }
+
+            ul {
+                padding-left: 18px;
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    padding: 0 30px;
+                }
+
+                .resume-content {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .footer {
+                width: 100%;
+                margin-top: 120px;
+                padding: 25px 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: linear-gradient(90deg, #0a0014, #1b0033);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                color: #ffffff;
+                font-size: 0.95rem;
+            }
+
+            .footer strong {
+                color: #e9d5ff;
+            }
+
+            .footer .right {
+                text-align: right;
+            }
+
+            @media (max-width: 700px) {
+                .footer {
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
+                    padding: 20px;
+                }
+
+                .footer .right {
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <h2>Bhavani's  Portfolio</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </nav>
+        <div class="resume-header">
+            <h1>My Resume</h1>
+            <div class="btn-group">
+                <a href="resume.pdf" target="_blank" class="view-btn">👁 View Resume</a>
+                <a href="resume.pdf" download class="download-btn">⬇ Download Resume</a>
+            </div>
+        </div>
+
+        <div class="resume-content">
+            <div class="block">
+                <h2>About Me</h2>
+                <p>Motivated and creative front-end developer passionate about building clean, responsive, and
+                    user-friendly websites.</p>
+
+                <h2>Education</h2>
+                <p>BCA – S.M Joshi College<br>Final Year</p>
+
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Web Design</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h2>Projects</h2>
+                <p><strong>Portfolio Website</strong><br>Personal portfolio showcasing skills and projects.</p>
+
+                <h2>Experience</h2>
+                <p>Fresher<br>Looking for opportunities to grow.</p>
+
+                <h2>Contact</h2>
+                <p>Email: bhavanimantur112@gmail.com</p>
+            </div>
+        </div>
+        </section>
+        <footer class="footer">
+            <p>Designed and Developed by <strong>Bhavani Mantur</strong></p>
+            <p class="right">© 2026 Bhavani Mantur</p>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Bhavani Mantur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #1b0033, #090012);
+      color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 30% 80%, white, transparent),
+        radial-gradient(1px 1px at 70% 30%, white, transparent),
+        radial-gradient(1px 1px at 90% 60%, white, transparent);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: rgb(121, 33, 204);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      z-index: 1000;
+    }
+
+    .navbar h2 {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #e9d5ff;
+      left: 0;
+      bottom: -6px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+      background-color: #a855f7;
+    }
+
+    .contact-section {
+      padding: 140px 0 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 2.6rem;
+      color: #c084fc;
+      margin-bottom: 40px;
+    }
+
+    /* Contact box */
+    .contact-box {
+      width: 420px;
+      max-width: 90%;
+      padding: 40px;
+      border-radius: 18px;
+      border: 2px solid #7c3aed;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #3f3f46;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: border 0.3s, background 0.3s;
+    }
+
+    .contact-box input:focus,
+    .contact-box textarea:focus {
+      border-color: #a855f7;
+      background: rgba(168, 85, 247, 0.1);
+      outline: none;
+    }
+
+    .contact-box input::placeholder,
+    .contact-box textarea::placeholder {
+      color: #e5e5e5;
+    }
+
+    .contact-box textarea {
+      height: 140px;
+      resize: none;
+    }
+
+    .contact-box button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #8b5cf6;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-box button:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+    }
+
+    /* Contact info & social */
+    .contact-info {
+      margin: 40px 0 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-info a {
+      color: #e9d5ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #a855f7;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+    }
+
+    /* Testimonials / social proof */
+    .testimonials {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .testimonial {
+      background: rgba(168, 85, 247, 0.15);
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      font-style: italic;
+      color: #e5e5e5;
+      transition: background 0.3s;
+    }
+
+    .testimonial:hover {
+      background: rgba(168, 85, 247, 0.3);
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 20px 80px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+    }
+
+    footer div {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .contact-section {
+        padding: 140px 20px 60px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <h2>Bhavani's Portfolio</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1 class="contact-title">Feel Free to Contact ✨</h1>
+
+    <div class="contact-box">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Tell me about your project or idea"></textarea>
+      <button>Send Message</button>
+    </div>
+    <div class="contact-info">
+      <a href="mailto:bhavani@example.com"><i class="fas fa-envelope"></i>bhavanimantur112@gamil.com/a>
+      <a href="https://www.linkedin.com/in/bhavani-mantur-5694222a3/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bm48SGb11S6mxfoWrj%2F13sA%3D%3D" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn Profile</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <div>Designed and Developed by <strong>Bhavani Mantur</strong></div>
+    <div>© 2026 Bhavani Mantur</div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bhavani Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: rgb(15, 3, 26);
+                color: whitesmoke;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                height: 80px;
+                background-color: rgb(121, 33, 204);
+            }
+
+            nav ul {
+                display: flex;
+            }
+
+            nav ul li {
+                list-style: none;
+                margin: 0 23px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+            }
+
+            nav ul li a:hover {
+                color: rgb(145, 145, 248);
+            }
+
+            .left {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+
+            .firstsection {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 120px auto;
+                max-width: 80vw;
+            }
+
+            .firstsection>div {
+                width: 45%;
+            }
+
+            .leftsection {
+                font-size: 2.6rem;
+                line-height: 1.4;
+            }
+
+            .leftsection .buttons {
+                margin-top: 30px;
+            }
+
+            .leftsection .btn {
+                padding: 10px 18px;
+                background: transparent;
+                color: white;
+                border: 2px solid rgba(255, 255, 255, 0.6);
+                border-radius: 6px;
+                font-size: 15px;
+                cursor: pointer;
+                margin-right: 15px;
+                transition: all 0.3s ease;
+            }
+
+            .leftsection .btn:hover {
+                background-color: rgb(33, 33, 111)
+                border-color: white;
+            }
+
+            .rightsection img {
+                width: 85%;
+            }
+
+            .purple {
+                color: blueviolet;
+            }
+
+            .text-gray {
+                color: gray;
+            }
+
+            /* ===== WORK EXPERIENCE ===== */
+            .secondsection {
+                max-width: 80vw;
+                margin: auto;
+            }
+
+            .secondsection h1 {
+                font-size: 1.9rem;
+            }
+
+            .secondsection .box {
+                position: relative;
+                width: 100%;
+                margin: 120px 0 260px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* horizontal line */
+            .secondsection .box::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: white;
+            }
+
+            .secondsection .vertical {
+                position: relative;
+                width: 2px;
+                height: 140px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-top {
+                position: absolute;
+                top: -12px;
+                width: 22px;
+                background: rgb(15, 3, 26);
+            }
+
+            .vertical-title {
+                margin-top: 160px;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                width: 150px;
+            }
+
+            .vertical-year {
+                margin-top: 4px;
+                font-size: 12px;
+                color: #c7a8ff;
+                text-align: center;
+            }
+
+            .vertical-desc {
+                margin-top: 8px;
+                font-size: 9px;
+                color: gray;
+                width: 150px;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            footer {
+                background-color: rgb(28, 3, 53);
+                padding: 60px 0 20px;
+            }
+
+            .footer {
+                display: flex;
+                justify-content: space-evenly;
+                max-width: 90vw;
+                margin: auto;
+            }
+
+            .footer>div {
+                width: 220px;
+            }
+
+            .footer h3 {
+                font-size: 1.4rem;
+            }
+
+            .footer-ul {
+                list-style: none;
+            }
+
+            .footer-ul li {
+                margin: 8px 0;
+                font-size: 14px;
+                color: #cfcfcf;
+                cursor: pointer;
+            }
+
+            .footer-ul li:hover {
+                color: white;
+            }
+
+            .footer-rights {
+                text-align: center;
+                color: gray;
+                font-size: 12px;
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <div class="left">Bhavani's Portfolio</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="firstsection">
+                <div class="leftsection">
+                    Hi, My name is <span class="purple">Bhavani</span><br>
+                    and I am a passionate<br>
+                    <span id="element"></span>
+
+                    <div class="buttons">
+                        <button class="btn">Download Resume</button>
+                        <button class="btn">Visit Github</button>
+                    </div>
+                </div>
+
+                <div class="rightsection">
+                    <img src="ad.png" alt="">
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="secondsection">
+                <span class="text-gray">what i have done so far</span>
+                <h1>Work Experience</h1>
+
+                <div class="box">
+
+                    <div class="vertical">
+                        <img class="image-top" src="html.jpg">
+                        <div class="vertical-title">HTML Developer</div>
+                        <div class="vertical-year">(2021–2022)</div>
+                        <div class="vertical-desc">
+                            Learnt HTML and practices it until I ecxel in it.
+                        </div>
+                    </div>
+
+                    <div class="vertical">
+                        <img class="image-top" src="fab.jpg">
+                        <div class="vertical-title">CSS Developer</div>
+                        <div class="vertical-year">(2022–2023)</div>
+                        <div class="vertical-desc">
+                            Learnt various ways of style HTML page and making it attractive.
+                        </div>
+                    </div>
+
+                    <div class="vertical">
+                        <img class="image-top" src="insta.jpg">
+                        <div class="vertical-title">Javascript Developer</div>
+                        <div class="vertical-year">(2023–2024)</div>
+                        <div class="vertical-desc">
+                            Learnt to update ,count, accept users input elements.
+                        </div>
+                    </div>
+
+                    <div class="vertical">
+                        <img class="image-top" src="twit.jpg">
+                        <div class="vertical-title">Web Developer</div>
+                        <div class="vertical-year">(2024–2025)</div>
+                        <div class="vertical-desc">
+                            Bulit this portfolio using HTML and CSS.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <h3>Bhavani's Developer Portfolio</h3>
+                </div>
+
+                <div class="footer-second">
+                    <ul class="footer-ul">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div class="footer-third">
+                    <ul class="footer-ul">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div class="footer-fourth">
+                    <ul class="footer-ul">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-rights">
+                copyright&#169;www.bhavanisportfolio.com | All rights reserved
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            new Typed('#element', {
+                strings: ['Web Developer', 'Web Designer'],
+                typeSpeed: 50,
+                backSpeed: 40,
+                loop: true
+            });
+        </script>
+
+    </body>
+
+</html>

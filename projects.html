@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Projects | Bhavani Mantur</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+                background: radial-gradient(circle at top, #140021, #050008);
+                color: #ffffff;
+                min-height: 100vh;
+                overflow-x: hidden;
+            }
+
+            /* star background */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background-image:
+                    radial-gradient(1px 1px at 20% 30%, white, transparent),
+                    radial-gradient(1px 1px at 70% 60%, white, transparent),
+                    radial-gradient(1px 1px at 40% 80%, white, transparent);
+                opacity: 0.3;
+                pointer-events: none;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                background-color: rgb(121, 33, 204);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 60px;
+                z-index: 1000;
+            }
+
+            .navbar h2 {
+                color: #ffffff;
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+            }
+
+            .nav-links a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 15px;
+                position: relative;
+            }
+
+            .nav-links a::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background: #e9d5ff;
+                left: 0;
+                bottom: -6px;
+                transition: 0.3s ease;
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+            .projects-section {
+                padding: 140px 5% 100px;
+                text-align: center;
+            }
+
+            .projects-section h1 {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .projects-section h1 span {
+                color: #a855f7;
+            }
+
+            .projects-section p {
+                margin-top: 12px;
+                color: #d1d1e0;
+                font-size: 1.1rem;
+            }
+
+            .project-container {
+                margin-top: 80px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .project-card {
+                background: #0f0f1a;
+                border-radius: 18px;
+                padding: 20px;
+                width: 340px;
+                box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 0 40px rgba(168, 85, 247, 0.45);
+            }
+
+            .project-card img {
+                width: 100%;
+                border-radius: 14px;
+                margin-bottom: 20px;
+            }
+
+            .project-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+            .project-card p {
+                font-size: 0.95rem;
+                color: #cfcfe6;
+                line-height: 1.6;
+            }
+
+            footer {
+                margin-top: 120px;
+                padding: 25px 5%;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.95rem;
+                color: #d1d1e0;
+            }
+
+            @media (max-width: 600px) {
+                .projects-section h1 {
+                    font-size: 2.3rem;
+                }
+
+                footer {
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <h2>Bhavani's Portfolio</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <section class="projects-section">
+            <h1>My Recent <span>Works</span></h1>
+            <p>Here is my portfolio project.</p>
+
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="porfolio.png" alt="Portfolio Project">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Personal portfolio website built using HTML and CSS,
+                        showcasing my skills, projects, and contact details
+                        with a clean and modern UI.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>Designed and Developed by <strong>Bhavani Mantur</strong></div>
+            <div>© 2026 Bhavani Mantur</div>
+        </footer>
+
+    </body>
+
+</html>
